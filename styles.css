@@ -229,3 +229,226 @@ h2 {
     padding: 28px 20px;
   }
 }
+
+/* Multiplayer table */
+.table-panel {
+  max-width: 900px;
+}
+
+.table-status {
+  color: #d8bd7a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 12px 0 16px;
+}
+
+.casino-table {
+  border: 1px solid #9b814b;
+  border-radius: 20px;
+  padding: 22px;
+  background: radial-gradient(ellipse at center, #176044 0%, #0b3b2b 55%, #08271d 100%);
+  box-shadow: inset 0 0 35px #0006, 0 12px 30px #0005;
+}
+
+.dealer-area {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hand-heading {
+  color: #f0d99e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 78px;
+}
+
+.playing-card {
+  width: 53px;
+  height: 76px;
+  border-radius: 7px;
+  background: #fffdf5;
+  color: #172018;
+  border: 1px solid #d8d2c3;
+  box-shadow: 0 4px 8px #0005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.playing-card strong {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.playing-card.red-card {
+  color: #bd2734;
+}
+
+.playing-card.small {
+  width: 39px;
+  height: 56px;
+  font-size: 15px;
+}
+
+.playing-card.small strong {
+  font-size: 19px;
+}
+
+.playing-card.card-back {
+  color: #f0d99e;
+  border: 2px solid #e2c37c;
+  background: repeating-linear-gradient(45deg, #173c2c, #173c2c 5px, #24553d 5px, #24553d 10px);
+  font-size: 32px;
+}
+
+.playing-card.card-back.small {
+  font-size: 23px;
+}
+
+.table-divider {
+  height: 1px;
+  background: #c3a15d55;
+  margin: 18px 0;
+}
+
+.players-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.game-player {
+  min-width: 0;
+  border: 1px solid #55745b;
+  border-radius: 12px;
+  padding: 12px;
+  background: #071d15bb;
+  text-align: left;
+}
+
+.game-player.current-player {
+  border-color: #d6b568;
+  box-shadow: 0 0 0 1px #d6b56844;
+}
+
+.game-player.active-turn {
+  border-color: #f2d88f;
+  box-shadow: 0 0 0 2px #f2d88f55, 0 0 18px #e5c77f22;
+}
+
+.game-player-top,
+.player-meta,
+.bet-row,
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.player-name {
+  color: #f1d99d;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.player-money,
+.player-meta,
+.control-hint,
+.no-cards {
+  color: #a9bdae;
+  font-size: 11px;
+}
+
+.compact-cards {
+  justify-content: flex-start;
+  min-height: 65px;
+  margin: 6px 0;
+}
+
+.player-meta {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 7px 12px;
+}
+
+.player-meta b {
+  color: #e7d08d;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.player-meta .result-bad {
+  color: #ff9999;
+}
+
+.player-meta .result-good,
+.turn-label {
+  color: #a9edbd;
+}
+
+.game-controls {
+  margin: 20px 0 8px;
+  text-align: left;
+}
+
+.game-controls button {
+  flex: 1;
+}
+
+.game-controls input {
+  margin: 0;
+  max-width: 150px;
+}
+
+.bet-row {
+  margin: 12px 0;
+}
+
+.your-turn,
+.round-finished {
+  color: #f2d88f;
+  font-weight: 800;
+  text-align: center;
+}
+
+.action-row {
+  margin-top: 12px;
+}
+
+.leave-button {
+  margin-top: 16px !important;
+}
+
+@media (max-width: 560px) {
+  .table-panel {
+    padding: 24px 14px;
+  }
+  .casino-table {
+    padding: 13px;
+  }
+  .players-area {
+    grid-template-columns: 1fr;
+  }
+  .playing-card {
+    width: 46px;
+    height: 66px;
+  }
+}
